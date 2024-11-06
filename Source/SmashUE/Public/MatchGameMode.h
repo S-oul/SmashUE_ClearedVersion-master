@@ -19,8 +19,11 @@ class SMASHUE_API AMatchGameMode : public AGameModeBase
 	
 public:
 	virtual void BeginPlay() override;
-
+	
 protected:
+	UPROPERTY()
+	TArray<ASmashCharacter*> CharactersInsideArena;
+	
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<ASmashCharacter> SmashCharacterClassP0;
 	UPROPERTY(EditAnywhere)
@@ -32,6 +35,8 @@ protected:
 
 private:
 	void FindPlayerStartActorInArena(TArray<AArenaPlayerStart*>& ResultsActors);
+
+	void SpawnCharacters(const TArray<AArenaPlayerStart*>& SpawnPoints);
 	
 	TSubclassOf<ASmashCharacter> GetSmashCharacterClassFromInputType(EAutoReceiveInput::Type InpoutType) const;
 };
