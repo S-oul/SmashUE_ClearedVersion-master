@@ -11,9 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/ArenaSettings.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/ArenaSettings.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730798220845</updated>
       <workItem from="1730798222183" duration="232000" />
-      <workItem from="1730901717073" duration="2294000" />
+      <workItem from="1730901717073" duration="3155000" />
     </task>
     <servers />
   </component>
