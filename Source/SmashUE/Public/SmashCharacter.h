@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "SmashCharacter.generated.h"
 
-class USmashCHaracterStateMachine
+class USmashCharacterStateMachine;
 
 UCLASS()
 class SMASHUE_API ASmashCharacter : public ACharacter
@@ -47,7 +47,8 @@ protected:
 	
 #pragma region State Machine
 public:
-	void CreateStateMachine();;
+	void CreateStateMachine();
+	void InitStateMachine();
 protected:
 	UPROPERTY();
 	TObjectPtr<USmashCharacterStateMachine> StateMachine;

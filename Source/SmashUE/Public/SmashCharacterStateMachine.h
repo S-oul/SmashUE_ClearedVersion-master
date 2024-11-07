@@ -11,8 +11,26 @@
  */
 
 
+class ASmashCharacter;
+class USmashCharacterState;
+
 UCLASS()
 class SMASHUE_API USmashCharacterStateMachine : public UObject
 {
 	GENERATED_BODY()
+
+public:
+	void Init(ASmashCharacter* InStateMachine);
+
+	ASmashCharacter* GetCharacter() const;
+
+protected:
+	UPROPERTY()
+	TObjectPtr<ASmashCharacter> Character;
+
+	TArray<USmashCharacterState*> AllStates;
+
+	void FindState();
+
+	void InitState();
 };

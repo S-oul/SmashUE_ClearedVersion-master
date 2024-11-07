@@ -3,6 +3,8 @@
 
 #include "SmashCharacter.h"
 
+#include "SmashCharacterStateMachine.h"
+
 
 // Sets default values
 ASmashCharacter::ASmashCharacter()
@@ -16,7 +18,8 @@ ASmashCharacter::ASmashCharacter()
 void ASmashCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	CreateStateMachine();
+	InitStateMachine();
 }
 
 // Called every frame
@@ -53,6 +56,12 @@ void ASmashCharacter::RotateMeshUsingOrientX() const
 
 void ASmashCharacter::CreateStateMachine()
 {
-	StateMachine = 
+	StateMachine = NewObject<USmashCharacterStateMachine>(this);
+}
+
+void ASmashCharacter::InitStateMachine()
+{
+	if(StateMachine == nullptr) return;
+	StateMachine->Init(this);
 }
 
