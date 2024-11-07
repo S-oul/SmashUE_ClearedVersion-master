@@ -10,27 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateIdle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateIdle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacterStateMachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacterStateMachine.h" afterDir="false" />
-    </list>
+    <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -210,7 +194,7 @@
       <updated>1730798220845</updated>
       <workItem from="1730798222183" duration="232000" />
       <workItem from="1730901717073" duration="3374000" />
-      <workItem from="1730966823387" duration="15805000" />
+      <workItem from="1730966823387" duration="17151000" />
     </task>
     <servers />
   </component>
