@@ -29,6 +29,7 @@ public:
 
 	USmashCharacterState* GetState(ESmashCharacterStateID StateID) const;
 	
+	void Tick(float DeltaTime);
 protected:
 	UPROPERTY()
 	TObjectPtr<ASmashCharacter> Character;
@@ -45,4 +46,5 @@ protected:
 	void FindState();
 
 	void InitState();
+
 };

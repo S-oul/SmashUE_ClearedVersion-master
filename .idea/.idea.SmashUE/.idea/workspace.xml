@@ -17,8 +17,8 @@
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateIdle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateIdle.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" afterDir="false" />
@@ -210,7 +210,7 @@
       <updated>1730798220845</updated>
       <workItem from="1730798222183" duration="232000" />
       <workItem from="1730901717073" duration="3374000" />
-      <workItem from="1730966823387" duration="13739000" />
+      <workItem from="1730966823387" duration="15805000" />
     </task>
     <servers />
   </component>

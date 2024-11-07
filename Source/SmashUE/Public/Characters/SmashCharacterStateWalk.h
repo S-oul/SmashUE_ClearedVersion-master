@@ -26,6 +26,6 @@ public:
 	virtual void StateEnter(ESmashCharacterStateID OldStateID) override;
 
 	virtual void StateExit(ESmashCharacterStateID NewStateID) override;
-
+	void StateTick(float DeltaTime);
 };
 

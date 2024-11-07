@@ -51,5 +51,17 @@ void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NewStateID)
 	);
 }
 
+void USmashCharacterStateWalk::StateTick(float DeltaTime)
+{
+	Super::StateTick(DeltaTime);
+
+	GEngine->AddOnScreenDebugMessage(
+		-1,
+		0.1f,
+		FColor::Green,
+		TEXT("Tick State Walk")
+		);
+}
+
 
 
