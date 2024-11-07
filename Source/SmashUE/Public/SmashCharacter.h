@@ -50,7 +50,7 @@ public:
 	void CreateStateMachine();
 	void InitStateMachine();
 protected:
-	UPROPERTY();
+	UPROPERTY(BlueprintReadOnly);
 	TObjectPtr<USmashCharacterStateMachine> StateMachine;
 
 	

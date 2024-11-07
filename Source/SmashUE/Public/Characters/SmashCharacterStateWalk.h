@@ -22,4 +22,10 @@ protected:
 
 public:
 	virtual ESmashCharacterStateID GetStateID() override;
+	
+	virtual void StateEnter(ESmashCharacterStateID OldStateID) override;
+
+	virtual void StateExit(ESmashCharacterStateID NewStateID) override;
+
 };
+

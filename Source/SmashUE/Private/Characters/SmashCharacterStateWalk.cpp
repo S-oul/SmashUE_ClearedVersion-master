@@ -29,4 +29,27 @@ ESmashCharacterStateID USmashCharacterStateWalk::GetStateID()
 	return ESmashCharacterStateID::Walk;
 }
 
+void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID OldStateID)
+{
+	Super::StateEnter(OldStateID);
+	GEngine->AddOnScreenDebugMessage(
+		-1,
+		3.f,
+		FColor::Cyan,
+		TEXT("State Walk Enter")
+		);
+}
+
+void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NewStateID)
+{
+	Super::StateExit(NewStateID);
+	GEngine->AddOnScreenDebugMessage(
+	-1,
+	3.f,
+	FColor::Red,
+	TEXT("State Walk Exit")
+	);
+}
+
+
 
