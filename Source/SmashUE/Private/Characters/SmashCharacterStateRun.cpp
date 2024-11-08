@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Characters/SmashCharacterStateWalk.h"
+#include "Characters/SmashCharacterStateRun.h"
 
 #include "SmashCharacter.h"
 
 
 // Sets default values for this component's properties
-USmashCharacterStateWalk::USmashCharacterStateWalk()
+USmashCharacterStateRun::USmashCharacterStateRun()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -18,7 +18,7 @@ USmashCharacterStateWalk::USmashCharacterStateWalk()
 
 
 // Called when the game starts
-void USmashCharacterStateWalk::BeginPlay()
+void USmashCharacterStateRun::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -26,12 +26,12 @@ void USmashCharacterStateWalk::BeginPlay()
 	
 }
 
-ESmashCharacterStateID USmashCharacterStateWalk::GetStateID()
+ESmashCharacterStateID USmashCharacterStateRun::GetStateID()
 {
-	return ESmashCharacterStateID::Walk;
+	return ESmashCharacterStateID::Run;
 }
 
-void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID OldStateID)
+void USmashCharacterStateRun::StateEnter(ESmashCharacterStateID OldStateID)
 {
 	Super::StateEnter(OldStateID);
 	GEngine->AddOnScreenDebugMessage(
@@ -42,18 +42,18 @@ void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID OldStateID)
 		);
 }
 
-void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NewStateID)
+void USmashCharacterStateRun::StateExit(ESmashCharacterStateID NewStateID)
 {
 	Super::StateExit(NewStateID);
 	GEngine->AddOnScreenDebugMessage(
 	-1,
 	3.f,
 	FColor::Red,
-	TEXT("State Walk Exit")
+	TEXT("State Run Exit")
 	);
 }
 
-void USmashCharacterStateWalk::StateTick(float DeltaTime)
+void USmashCharacterStateRun::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
 
@@ -61,10 +61,10 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 		-1,
 		0.1f,
 		FColor::Green,
-		TEXT("Tick State Walk")
+		TEXT("Tick State Run")
 		);
 	
-	Character->SetActorLocation(Character->GetTransform().GetLocation() += FVector(WalkSpeed*DeltaTime, 0, 0) * Character->GetOrientX());
+	Character->SetActorLocation(Character->GetTransform().GetLocation() += FVector(RunSpeed*DeltaTime, 0, 0) * Character->GetOrientX());
 }
 
 

@@ -3,6 +3,7 @@
 
 #include "SmashCharacterState.h"
 
+#include "SmashCharacter.h"
 #include "SmashCharacterStateMachine.h"
 
 
@@ -36,11 +37,19 @@ void USmashCharacterState::StateInit(USmashCharacterStateMachine* InStateMachine
 
 void USmashCharacterState::StateEnter(ESmashCharacterStateID OldStateID)
 {
-	
+	Character->PlayAnimMontage(StateAnimation);
+	GEngine->AddOnScreenDebugMessage
+	(
+	-1,
+	3.f,
+	FColor::Purple,
+	StateAnimation.GetFullName()
+	);
 }
 
 void USmashCharacterState::StateExit(ESmashCharacterStateID NewStateID)
 {
+	Character->StopAnimMontage();
 }
 
 void USmashCharacterState::StateTick(float DeltaTime)

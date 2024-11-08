@@ -10,7 +10,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="" />
+    <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateRun.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateRun.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +66,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.environmentSetup",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -195,6 +206,7 @@
       <workItem from="1730798222183" duration="232000" />
       <workItem from="1730901717073" duration="3374000" />
       <workItem from="1730966823387" duration="17151000" />
+      <workItem from="1731053876210" duration="5911000" />
     </task>
     <servers />
   </component>
