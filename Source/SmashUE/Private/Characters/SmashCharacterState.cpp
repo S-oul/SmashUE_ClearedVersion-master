@@ -2,7 +2,6 @@
 
 
 #include "SmashCharacterState.h"
-
 #include "SmashCharacter.h"
 #include "SmashCharacterStateMachine.h"
 

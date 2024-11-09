@@ -11,13 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterSettings.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Inputs/SmashCharacterInputData.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterSettings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/SmashUE.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/SmashUE.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +207,8 @@
       <workItem from="1730966823387" duration="17151000" />
       <workItem from="1731053876210" duration="5911000" />
       <workItem from="1731068876992" duration="669000" />
-      <workItem from="1731069629019" duration="3846000" />
+      <workItem from="1731069629019" duration="5504000" />
+      <workItem from="1731094209306" duration="2958000" />
     </task>
     <servers />
   </component>
@@ -224,11 +226,6 @@
           <url>file://$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacterStateMachine.h</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

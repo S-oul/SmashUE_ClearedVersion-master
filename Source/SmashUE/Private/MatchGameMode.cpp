@@ -33,6 +33,14 @@ void AMatchGameMode::BeginPlay()
 	}
 }
 
+USmashCharacterInputData* AMatchGameMode::LoadInputDataFromConfig()
+{
+}
+
+UInputMappingContext* AMatchGameMode::LoadInputMappingContextFromConfig()
+{
+}
+
 void AMatchGameMode::FindPlayerStartActorInArena(TArray<AArenaPlayerStart*>& ResultsActors)
 {
 	TArray<AActor*> FoundActors;

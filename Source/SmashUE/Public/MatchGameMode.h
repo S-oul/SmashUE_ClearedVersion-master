@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ArenaSettings.h"
 #include "GameFramework/GameModeBase.h"
+#include "Inputs/SmashCharacterInputData.h"
 #include "MatchGameMode.generated.h"
 
 class ASmashCharacter;
@@ -25,6 +27,10 @@ protected:
 	TArray<ASmashCharacter*> CharactersInsideArena;
 	
 private:
+	USmashCharacterInputData* LoadInputDataFromConfig();
+
+	UInputMappingContext* LoadInputMappingContextFromConfig();
+	
 	void FindPlayerStartActorInArena(TArray<AArenaPlayerStart*>& ResultsActors);
 
 	void SpawnCharacters(const TArray<AArenaPlayerStart*>& SpawnPoints);
