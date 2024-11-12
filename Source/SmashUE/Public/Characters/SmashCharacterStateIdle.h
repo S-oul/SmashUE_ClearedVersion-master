@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "SmashCharacterSettings.h"
 #include "Characters/SmashCharacterState.h"
 #include "SmashCharacterStateIdle.generated.h"
 
@@ -29,4 +30,8 @@ public:
 
 	virtual void StateTick(float DeltaTime) override;
 
+	float MoveXTreshHold;
+
+	UFUNCTION()
+	void OnInputMoveXFast(float InputMoveX);
 };

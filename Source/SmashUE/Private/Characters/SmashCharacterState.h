@@ -8,6 +8,7 @@
 #include "SmashCharacterState.generated.h"
 
 
+class USmashCharacterSettings;
 class ASmashCharacter;
 class USmashCharacterStateMachine;
 
@@ -34,6 +35,9 @@ protected:
 	UPROPERTY()
 	TObjectPtr<ASmashCharacter> Character;
 
+	UPROPERTY()
+	TSoftObjectPtr<USmashCharacterSettings> CharacterSettings;
+	
 	UPROPERTY()
 	TObjectPtr<USmashCharacterStateMachine> StateMachine;
 	

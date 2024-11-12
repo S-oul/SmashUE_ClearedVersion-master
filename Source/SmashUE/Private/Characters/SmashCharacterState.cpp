@@ -25,6 +25,7 @@ void USmashCharacterState::StateInit(USmashCharacterStateMachine* InStateMachine
 {
 	StateMachine = InStateMachine;
 	Character = InStateMachine->GetCharacter();
+	CharacterSettings = GetDefault<USmashCharacterSettings>();
 	GEngine->AddOnScreenDebugMessage
 	(
 	-1,

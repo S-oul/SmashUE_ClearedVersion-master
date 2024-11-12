@@ -22,13 +22,17 @@ protected:
 
 public:
 	virtual ESmashCharacterStateID GetStateID() override;
-	
+
+	UFUNCTION()
 	virtual void StateEnter(ESmashCharacterStateID OldStateID) override;
 
 	virtual void StateExit(ESmashCharacterStateID NewStateID) override;
 	virtual void StateTick(float DeltaTime) override;
+	
+	void OnInputMoveXFast(float InputMoveX);
 
 	UPROPERTY(EditAnywhere)
 	float WalkSpeed= 200;
+	float MoveXTreshHold;
 };
 

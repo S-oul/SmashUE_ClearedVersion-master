@@ -122,10 +122,26 @@ void ASmashCharacter::BindInputMoveAxisAndActions(UEnhancedInputComponent* Enhan
 			&ASmashCharacter::OnInputMoveX
 			);
 	}
+
+	if(InputData->InputActionMoveFastX)
+	{
+		EnhancedInputComponent->BindAction(
+			InputData->InputActionMoveFastX,
+			ETriggerEvent::Started,
+			this,
+			&ASmashCharacter::OnInputMoveXFast
+			);
+	}
 }
 
 void ASmashCharacter::OnInputMoveX(const FInputActionValue& InputActionValue)
 {
 	InputMoveX = InputActionValue.Get<float>();
+}
+
+void ASmashCharacter::OnInputMoveXFast(const FInputActionValue& InputActionValue)
+{
+	InputMoveX = InputActionValue.Get<float>();
+	InputMoveXFastEvent.Broadcast(InputMoveX);
 }
 
