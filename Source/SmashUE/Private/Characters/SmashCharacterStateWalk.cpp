@@ -4,6 +4,7 @@
 #include "Characters/SmashCharacterStateWalk.h"
 
 #include "SmashCharacter.h"
+#include "SmashCharacterStateMachine.h"
 
 
 // Sets default values for this component's properties
@@ -63,9 +64,30 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 		FColor::Green,
 		TEXT("Tick State Walk")
 		);
-	
-	Character->SetActorLocation(Character->GetTransform().GetLocation() += FVector(WalkSpeed*DeltaTime, 0, 0) * Character->GetOrientX());
+
+	if(FMath::Abs(Character->GetInputMoveX()) < 0.1f)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Walk);
+	}else
+	{
+		Character->SetOrientX(Character->GetInputMoveX());
+		Character->AddMovementInput(FVector::ForwardVector, Character->GetOrientX());
+		
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
