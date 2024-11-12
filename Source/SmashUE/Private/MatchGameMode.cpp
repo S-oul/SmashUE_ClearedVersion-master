@@ -8,6 +8,8 @@
 #include "Kismet//GameplayStatics.h"
 #include "SmashCharacter.h"
 
+class UInputMappingContext;
+
 
 void AMatchGameMode::BeginPlay()
 {
@@ -35,10 +37,16 @@ void AMatchGameMode::BeginPlay()
 
 USmashCharacterInputData* AMatchGameMode::LoadInputDataFromConfig()
 {
+	const USmashCharacterSettings* CharacterSettings = GetDefault<USmashCharacterSettings>();
+	if(CharacterSettings == nullptr) return nullptr;
+	return CharacterSettings->InputData.LoadSynchronous();
 }
 
 UInputMappingContext* AMatchGameMode::LoadInputMappingContextFromConfig()
 {
+	const USmashCharacterSettings* CharacterSettings = GetDefault<USmashCharacterSettings>();
+	if(CharacterSettings == nullptr) return nullptr;
+	return CharacterSettings->InputMappingContext.LoadSynchronous();
 }
 
 void AMatchGameMode::FindPlayerStartActorInArena(TArray<AArenaPlayerStart*>& ResultsActors)
@@ -47,15 +55,19 @@ void AMatchGameMode::FindPlayerStartActorInArena(TArray<AArenaPlayerStart*>& Res
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AArenaPlayerStart::StaticClass(), FoundActors);
 
 	for (int i = 0; i < FoundActors.Num(); ++i) {
-		AArenaPlayerStart* ArenanPlayerStartActor = Cast<AArenaPlayerStart>(FoundActors[i]);
-		if (ArenanPlayerStartActor == nullptr) continue;
+		AArenaPlayerStart* ArenaPlayerStart = Cast<AArenaPlayerStart>(FoundActors[i]);
+		if (ArenaPlayerStart == nullptr) continue;
 
-		ResultsActors.Add(ArenanPlayerStartActor);
+		ResultsActors.Add(ArenaPlayerStart);
 	}
 }
 
 void AMatchGameMode::SpawnCharacters(const TArray<AArenaPlayerStart*>& SpawnPoints)
 {
+
+	USmashCharacterInputData* InputData = LoadInputDataFromConfig();
+	UInputMappingContext* InputMappingContext = LoadInputMappingContextFromConfig();
+	
 	for(AArenaPlayerStart* SpawnPoint : SpawnPoints)
 	{
 		EAutoReceiveInput::Type InputType = SpawnPoint->AutoReceiveInput.GetValue();
@@ -68,6 +80,10 @@ void AMatchGameMode::SpawnCharacters(const TArray<AArenaPlayerStart*>& SpawnPoin
 			);
 
 		if(NewCharacter == nullptr) continue;
+
+		NewCharacter->InputData = InputData;
+		NewCharacter->InputMappingContext = InputMappingContext;
+		
 		NewCharacter-> AutoPossessPlayer = SpawnPoint->AutoReceiveInput;
 		NewCharacter->SetOrientX(SpawnPoint->GetStartOrientX());
 		NewCharacter->FinishSpawning(SpawnPoint->GetTransform());
