@@ -31,6 +31,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	static int CharacterNumber;
+	int CharacterId = 0;
+
 #pragma endregion
 
 #pragma region Orient
@@ -74,19 +77,23 @@ protected:
 	
 #pragma endregion
 
-#pragma region Input Move X
+#pragma region Input Move 
 
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FInputMoveXEvent, float, InputMoveX);
 	
 public:
 	float GetInputMoveX() const;
 
+	float GetInputMoveY() const;
 	UPROPERTY()
 	FInputMoveXEvent InputMoveXFastEvent;
 
 protected:
 	UPROPERTY()
 	float InputMoveX = 0.f;
+	
+	UPROPERTY()
+	float InputMoveY = 0.f;
 
 private:
 	void BindInputMoveAxisAndActions(UEnhancedInputComponent* EnhancedInputComponent);
@@ -94,6 +101,9 @@ private:
 	void OnInputMoveX(const FInputActionValue& InputActionValue);
 	
 	void OnInputMoveXFast(const FInputActionValue& InputActionValue);
+	
+	void OnInputJump(const FInputActionValue& InputActionValue);
+
 	
 #pragma endregion	
 };

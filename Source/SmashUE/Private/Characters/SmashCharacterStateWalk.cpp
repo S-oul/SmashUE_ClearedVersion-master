@@ -5,6 +5,7 @@
 
 #include "SmashCharacter.h"
 #include "SmashCharacterStateMachine.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 
 // Sets default values for this component's properties
@@ -35,9 +36,10 @@ ESmashCharacterStateID USmashCharacterStateWalk::GetStateID()
 void USmashCharacterStateWalk::StateEnter(ESmashCharacterStateID OldStateID)
 {
 	Super::StateEnter(OldStateID);
-	
+	Character->GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 	Character->InputMoveXFastEvent.AddDynamic(this,&USmashCharacterStateWalk::OnInputMoveXFast);
 
+	MoveXTreshHold = CharacterSettings->MoveXTreshHold;
 }
 
 void USmashCharacterStateWalk::StateExit(ESmashCharacterStateID NewStateID)
@@ -51,16 +53,10 @@ void USmashCharacterStateWalk::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
 
-	MoveXTreshHold = CharacterSettings->MoveXTreshHold;
-
-	
-	GEngine->AddOnScreenDebugMessage(
-		-1,
-		0.1f,
-		FColor::Green,
-		TEXT("Tick State Walk")
-		);
-
+	if(Character->GetInputMoveY() > 0)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Jump);
+	}
 	if(FMath::Abs(Character->GetInputMoveX()) < MoveXTreshHold)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Idle);

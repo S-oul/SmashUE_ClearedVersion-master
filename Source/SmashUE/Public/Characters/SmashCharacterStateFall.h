@@ -4,36 +4,28 @@
 
 #include "CoreMinimal.h"
 #include "Characters/SmashCharacterState.h"
-#include "SmashCharacterStateWalk.generated.h"
+#include "SmashCharacterStateFall.generated.h"
 
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class SMASHUE_API USmashCharacterStateWalk : public USmashCharacterState
+class SMASHUE_API USmashCharacterStateFall : public USmashCharacterState
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this component's properties
-	USmashCharacterStateWalk();
+	USmashCharacterStateFall();
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:
+	UFUNCTION()
 	virtual ESmashCharacterStateID GetStateID() override;
 
-	UFUNCTION()
 	virtual void StateEnter(ESmashCharacterStateID OldStateID) override;
 
 	virtual void StateExit(ESmashCharacterStateID NewStateID) override;
 	virtual void StateTick(float DeltaTime) override;
-	
-	void OnInputMoveXFast(float InputMoveX);
-
-	UPROPERTY(EditAnywhere)
-	float WalkSpeed= 200;
-	
-	float MoveXTreshHold;
 };
-

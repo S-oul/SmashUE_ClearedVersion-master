@@ -5,6 +5,10 @@
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "SmashCharacterStateMachine.h"
+#include "Camera/CameraWorldSubsystem.h"
+#include "GameFramework/CharacterMovementComponent.h"
+
+int ASmashCharacter::CharacterNumber = 0;
 
 // Sets default values
 ASmashCharacter::ASmashCharacter()
@@ -17,9 +21,16 @@ ASmashCharacter::ASmashCharacter()
 // Called when the game starts or when spawned
 void ASmashCharacter::BeginPlay()
 {
+
+	if(CharacterNumber > 4 ) CharacterNumber = 0;
+	
+	CharacterId = CharacterNumber++; 
+	
 	Super::BeginPlay();
 	CreateStateMachine();
 	InitStateMachine();
+
+	GetWorld()->GetSubsystem<UCameraWorldSubsystem>()->AddFollowTarget(this);
 }
 
 // Called every frame
@@ -97,6 +108,11 @@ float ASmashCharacter::GetInputMoveX() const
 	return InputMoveX;
 }
 
+float ASmashCharacter::GetInputMoveY() const
+{
+	return InputMoveY;
+}
+
 void ASmashCharacter::BindInputMoveAxisAndActions(UEnhancedInputComponent* EnhancedInputComponent)
 {
 	if(InputMappingContext == nullptr) return;
@@ -132,6 +148,30 @@ void ASmashCharacter::BindInputMoveAxisAndActions(UEnhancedInputComponent* Enhan
 			&ASmashCharacter::OnInputMoveXFast
 			);
 	}
+
+	if(InputData->InputActionJump)
+	{
+		EnhancedInputComponent->BindAction(
+		InputData->InputActionJump,
+		ETriggerEvent::Started,
+		this,
+		&ASmashCharacter::OnInputJump
+		);
+
+		EnhancedInputComponent->BindAction(
+		InputData->InputActionJump,
+		ETriggerEvent::Completed,
+		this,
+		&ASmashCharacter::OnInputJump
+		);
+		
+		EnhancedInputComponent->BindAction(
+		InputData->InputActionJump,
+		ETriggerEvent::Triggered,
+		this,
+		&ASmashCharacter::OnInputJump
+		);
+	}
 }
 
 void ASmashCharacter::OnInputMoveX(const FInputActionValue& InputActionValue)
@@ -144,4 +184,10 @@ void ASmashCharacter::OnInputMoveXFast(const FInputActionValue& InputActionValue
 	InputMoveX = InputActionValue.Get<float>();
 	InputMoveXFastEvent.Broadcast(InputMoveX);
 }
+
+void ASmashCharacter::OnInputJump(const FInputActionValue& InputActionValue)
+{
+	InputMoveY = InputActionValue.Get<float>();
+}
+
 

@@ -11,14 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateFall.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharactersStateJump.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateFall.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharactersStateJump.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Common/Inputs/DA_Characters_InputData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Common/Inputs/DA_Characters_InputData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Characters/Jamcon/BP_Character_Jamcon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/MatchGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateIdle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateRun.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateRun.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Characters/SmashCharacterStateWalk.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/MatchGameMode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/SmashUE.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/SmashUE.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacterStateMachine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateID.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Characters/SmashCharacterStateWalk.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Inputs/SmashCharacterInputData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +40,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Private/UObject/Class.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectGlobals.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -209,6 +211,11 @@
       <workItem from="1731068876992" duration="669000" />
       <workItem from="1731069629019" duration="5504000" />
       <workItem from="1731094209306" duration="2958000" />
+      <workItem from="1731420456247" duration="3780000" />
+      <workItem from="1731482384351" duration="26910000" />
+      <workItem from="1731655114210" duration="13590000" />
+      <workItem from="1731914246123" duration="17803000" />
+      <workItem from="1732085567999" duration="4269000" />
     </task>
     <servers />
   </component>
@@ -218,16 +225,5 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/SmashUE/Public/SmashCharacterStateMachine.h</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

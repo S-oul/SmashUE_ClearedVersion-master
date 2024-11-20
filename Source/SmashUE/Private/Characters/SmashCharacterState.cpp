@@ -26,34 +26,26 @@ void USmashCharacterState::StateInit(USmashCharacterStateMachine* InStateMachine
 	StateMachine = InStateMachine;
 	Character = InStateMachine->GetCharacter();
 	CharacterSettings = GetDefault<USmashCharacterSettings>();
-	GEngine->AddOnScreenDebugMessage
-	(
-	-1,
-	3.f,
-	FColor::Blue,
-	FString::Printf(TEXT("Init State %d"), GetStateID())
-	);
 }
 
 void USmashCharacterState::StateEnter(ESmashCharacterStateID OldStateID)
 {
 	Character->PlayAnimMontage(StateAnimation);
-	GEngine->AddOnScreenDebugMessage
-	(
-	-1,
-	3.f,
-	FColor::Purple,
-	StateAnimation.GetFullName()
-	);
 }
 
 void USmashCharacterState::StateExit(ESmashCharacterStateID NewStateID)
 {
-	Character->StopAnimMontage();
 }
 
 void USmashCharacterState::StateTick(float DeltaTime)
 {
+	GEngine->AddOnScreenDebugMessage
+	(
+	-1,
+	DeltaTime,
+	FColor::Green,
+this->GetName() + FString(" ") + FString::FromInt(Character->CharacterId)
+	);
 	
 }
 

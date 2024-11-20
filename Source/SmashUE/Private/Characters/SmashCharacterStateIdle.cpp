@@ -51,14 +51,11 @@ void USmashCharacterStateIdle::StateTick(float DeltaTime)
 	Super::StateTick(DeltaTime);
 
 	MoveXTreshHold = CharacterSettings->MoveXTreshHold;
-	
-	GEngine->AddOnScreenDebugMessage(
-		-1,
-		DeltaTime,
-		FColor::Green,
-		TEXT("StateIdle")
-		);
 
+	if(Character->GetInputMoveY() > 0)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Jump);
+	}
 	if(FMath::Abs(Character->GetInputMoveX()) > MoveXTreshHold)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Walk);

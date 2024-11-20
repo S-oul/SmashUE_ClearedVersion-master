@@ -5,6 +5,7 @@
 
 #include "SmashCharacter.h"
 #include "SmashCharacterStateMachine.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 
 // Sets default values for this component's properties
@@ -36,6 +37,8 @@ void USmashCharacterStateRun::StateEnter(ESmashCharacterStateID OldStateID)
 {
 	Super::StateEnter(OldStateID);
 
+	Character->GetCharacterMovement()->MaxWalkSpeed = RunSpeed;
+
 }
 
 void USmashCharacterStateRun::StateExit(ESmashCharacterStateID NewStateID)
@@ -48,14 +51,6 @@ void USmashCharacterStateRun::StateExit(ESmashCharacterStateID NewStateID)
 void USmashCharacterStateRun::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
-
-	GEngine->AddOnScreenDebugMessage(
-		-1,
-		0.1f,
-		FColor::Green,
-		TEXT("State Run")
-		);
-
 	if(FMath::Abs(Character->GetInputMoveX()) < CharacterSettings->MoveXTreshHold)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Idle);
@@ -65,7 +60,7 @@ void USmashCharacterStateRun::StateTick(float DeltaTime)
 		Character->AddMovementInput(FVector::ForwardVector, Character->GetOrientX());
 	}
 	
-	Character->SetActorLocation(Character->GetTransform().GetLocation() += FVector(RunSpeed*DeltaTime, 0, 0) * Character->GetOrientX());
+	//Character->SetActorLocation(Character->GetTransform().GetLocation() += FVector(RunSpeed*DeltaTime, 0, 0) * Character->GetOrientX());
 }
 
 

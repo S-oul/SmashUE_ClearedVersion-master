@@ -23,7 +23,16 @@ ASmashCharacter* USmashCharacterStateMachine::GetCharacter()const
 void USmashCharacterStateMachine::ChangeState(ESmashCharacterStateID NextStateID)
 {
 	USmashCharacterState* NewState = GetState(NextStateID);
-	if(NewState == nullptr) return;
+	if(NewState == nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(
+		-1,
+		1.f,
+		FColor::Blue,
+		TEXT("NEW IS NULL CONNARD")
+		);
+		return;
+	}
 
 	if(CurrentState != nullptr) CurrentState->StateExit(NextStateID);
 
@@ -31,6 +40,13 @@ void USmashCharacterStateMachine::ChangeState(ESmashCharacterStateID NextStateID
 	CurrentStateID = NextStateID;
 	CurrentState = NewState;
 
+	GEngine->AddOnScreenDebugMessage(
+		-1,
+		1,
+		FColor::Green,
+		CurrentState.GetFullName()
+		);
+	
 	if(CurrentState != nullptr) CurrentState->StateEnter(PreviousStateID);
 }
 
