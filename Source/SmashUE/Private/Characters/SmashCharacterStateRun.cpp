@@ -51,6 +51,11 @@ void USmashCharacterStateRun::StateExit(ESmashCharacterStateID NewStateID)
 void USmashCharacterStateRun::StateTick(float DeltaTime)
 {
 	Super::StateTick(DeltaTime);
+
+	if(Character->GetInputMoveY() > 0)
+	{
+		StateMachine->ChangeState(ESmashCharacterStateID::Jump);
+	}
 	if(FMath::Abs(Character->GetInputMoveX()) < CharacterSettings->MoveXTreshHold)
 	{
 		StateMachine->ChangeState(ESmashCharacterStateID::Idle);
