@@ -26,16 +26,16 @@ public:
 
 	virtual TStatId GetStatId() const override {return TStatId();};
 
-	void AddFollowTarget(AActor* Target);
+	void AddFollowTarget(UObject* Target);
 
-	void RemoveFollowTarget(AActor* Target);
+	void RemoveFollowTarget(UObject* Target);
 	
 protected:
 	UPROPERTY()
 	TObjectPtr<UCameraComponent> CameraMain;
 
 	UPROPERTY()
-	TArray<AActor*> FollowTargets;
+	TArray<UObject*> FollowTargets;
 
 	FVector CalculateAveragePositionBetweenTargets();
 

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Camera/CameraFollowTarget.h"
 #include "Characters/SmashCharacterSettings.h"
 #include "GameFramework/Character.h"
 #include "Inputs/SmashCharacterInputData.h"
@@ -11,7 +12,8 @@
 class USmashCharacterStateMachine;
 
 UCLASS()
-class SMASHUE_API ASmashCharacter : public ACharacter
+class SMASHUE_API ASmashCharacter : public ACharacter,
+									public ICameraFollowTarget
 {
 	GENERATED_BODY()
 	
@@ -104,6 +106,18 @@ private:
 	
 	void OnInputJump(const FInputActionValue& InputActionValue);
 
-	
+
+private:
 #pragma endregion	
+
+#pragma region Camera
+
+protected:
+	UPROPERTY(EditAnywhere)
+	bool isFollowable;
+public:
+	virtual FVector GetFollowPosition() override;
+	virtual bool IsFollowable() override;
+	
+#pragma endregion
 };
