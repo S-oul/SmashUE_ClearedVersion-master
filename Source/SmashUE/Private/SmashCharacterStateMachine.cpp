@@ -39,13 +39,6 @@ void USmashCharacterStateMachine::ChangeState(ESmashCharacterStateID NextStateID
 	ESmashCharacterStateID PreviousStateID = CurrentStateID;
 	CurrentStateID = NextStateID;
 	CurrentState = NewState;
-
-	GEngine->AddOnScreenDebugMessage(
-		-1,
-		1,
-		FColor::Green,
-		CurrentState.GetFullName()
-		);
 	
 	if(CurrentState != nullptr) CurrentState->StateEnter(PreviousStateID);
 }
