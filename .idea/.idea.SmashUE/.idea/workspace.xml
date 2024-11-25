@@ -11,10 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/LocalMultiplayer/LocalMultiplayer.Build.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/LocalMultiplayer/Private/LocalMultiplayer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/LocalMultiplayer/Public/LocalMultiplayer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp~" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmashUE.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SmashUE.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUEEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUEEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +28,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Private/UObject/Class.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectGlobals.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/Core/Public/Containers/UnrealString.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Private/UObject/Class.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectGlobals.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Unreal/UE_5.3/Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -138,7 +142,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Programs/AutomationTool/AutomationTool.csproj" />
+      <option name="PROJECT_PATH" value="$USER_HOME$/Unreal/UE_5.3/Engine/Source/Programs/AutomationTool/AutomationTool.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -156,7 +160,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj" />
+      <option name="PROJECT_PATH" value="$USER_HOME$/Unreal/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -167,7 +171,7 @@
       </method>
     </configuration>
     <configuration name="EpicGames.AspNet" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/../../../Unreal/UE_5.3/Engine/Source/Programs/Shared/EpicGames.AspNet/EpicGames.AspNet.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$USER_HOME$/Unreal/UE_5.3/Engine/Source/Programs/Shared/EpicGames.AspNet/EpicGames.AspNet.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="EpicGames.AspNet" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -204,6 +208,10 @@
       <workItem from="1732085567999" duration="4269000" />
       <workItem from="1732119559475" duration="6738000" />
       <workItem from="1732176407762" duration="16122000" />
+      <workItem from="1732380971664" duration="2923000" />
+      <workItem from="1732468726402" duration="2302000" />
+      <workItem from="1732609326219" duration="549000" />
+      <workItem from="1732609974208" duration="3624000" />
     </task>
     <servers />
   </component>
