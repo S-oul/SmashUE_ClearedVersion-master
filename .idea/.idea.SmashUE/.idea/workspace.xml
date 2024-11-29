@@ -12,8 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b21c83ff-f965-4532-8306-4c34b1983f3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmashUE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmashUE.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SmashUE.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/SmashUE/Arenas/Map_Arena_Castle.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/Camera/CameraWorldSubsystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Private/SmashCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SmashUE/Public/Camera/CameraWorldSubsystem.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +207,10 @@
       <workItem from="1732119559475" duration="6738000" />
       <workItem from="1732176407762" duration="16122000" />
       <workItem from="1732380971664" duration="2923000" />
-      <workItem from="1732468726402" duration="2302000" />
+      <workItem from="1732468726402" duration="13597000" />
+      <workItem from="1732625572794" duration="1064000" />
+      <workItem from="1732627916905" duration="3396000" />
+      <workItem from="1732778284481" duration="3228000" />
     </task>
     <servers />
   </component>

@@ -15,23 +15,37 @@ void UCameraWorldSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 {
 	Super::OnWorldBeginPlay(InWorld);
 	CameraMain = FindCameraByTag(TEXT("CameraMain"));
-		
+
+	InitCamZoomParameters();
 }
-
-void UCameraWorldSubsystem::TickUpdateCameraPosition(float DeltaTime)
-{
-	FVector aa = CalculateAveragePositionBetweenTargets();
-
-	ClampPositionIntoCameraBounds(aa);
-	
-	CameraMain->SetWorldLocation(aa);
-}
-
 
 void UCameraWorldSubsystem::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	TickUpdateCameraPosition(DeltaTime);
+	TickUpdateCameraZoom(DeltaTime);
+}
+void UCameraWorldSubsystem::TickUpdateCameraPosition(float DeltaTime)
+{
+	FVector Position = CalculateAveragePositionBetweenTargets();
+
+	ClampPositionIntoCameraBounds(Position);
+	
+	CameraMain->SetWorldLocation(Position);
+}
+
+
+
+void UCameraWorldSubsystem::TickUpdateCameraZoom(float DeltaTime)
+{
+	if(CameraMain == nullptr) return;
+	float MaxDistance = CalculateGreatastDistanceBetweenTargets();
+
+	float ClampedMaxDistance = FMath::Clamp(MaxDistance, CamZoomYMin,CamZoomYMax);
+	FVector pos = CameraMain->GetComponentLocation();
+	pos.Y = (ClampedMaxDistance - CamZoomDistanceMin)/(CamZoomDistanceMax - CamZoomDistanceMin);
+
+	CameraMain->SetWorldLocation(pos);
 }
 
 FVector UCameraWorldSubsystem::CalculateAveragePositionBetweenTargets()
@@ -146,6 +160,16 @@ FVector UCameraWorldSubsystem::CalculateWorldPositionViewportPosition(const FVec
 	return WorldPosition;
 }
 
+void UCameraWorldSubsystem::InitCamZoomParameters()
+{
+	TArray<AActor*> Components;
+	UGameplayStatics::GetAllActorsWithTag(GetWorld(), "CameraDistanceMin",Components);
+	Components.Num() > 0 ? CamZoomYMin = Components[0]->GetActorLocation().Y : -1.f;
+
+	UGameplayStatics::GetAllActorsWithTag(GetWorld(), "CameraDistanceMax",Components);
+	Components.Num() > 0 ? CamZoomYMax = Components[0]->GetActorLocation().Y : -1.f;
+}
+
 void UCameraWorldSubsystem::AddFollowTarget(UObject* Target)
 {
 	FollowTargets.Add(Target);
@@ -154,4 +178,37 @@ void UCameraWorldSubsystem::AddFollowTarget(UObject* Target)
 void UCameraWorldSubsystem::RemoveFollowTarget(UObject* Target)
 {
 	FollowTargets.Remove(Target);
+}
+
+float UCameraWorldSubsystem::CalculateGreatastDistanceBetweenTargets()
+{
+	float MaxDistance = 0.0f;
+
+	for (auto player : FollowTargets)
+	{
+		ICameraFollowTarget* Target1 = Cast<ICameraFollowTarget>(player);
+
+		if(Target1 == nullptr) continue;
+		
+		if(Target1->IsFollowable())
+		{
+			for (auto player2 : FollowTargets)
+			{
+				if (player != player2)
+				{
+					ICameraFollowTarget* Target2 = Cast<ICameraFollowTarget>(player);
+
+					if(Target2 == nullptr) continue;
+					
+					if(Target2->IsFollowable())
+					{
+						FVector difference = (Target1->GetFollowPosition() - Target2->GetFollowPosition());
+
+						if(difference.Length() > MaxDistance) MaxDistance = difference.Length();
+					}
+				}
+			}
+		}
+	}
+	return MaxDistance;
 }

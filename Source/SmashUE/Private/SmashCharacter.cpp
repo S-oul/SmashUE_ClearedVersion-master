@@ -134,7 +134,7 @@ void ASmashCharacter::BindInputMoveAxisAndActions(UEnhancedInputComponent* Enhan
 		EnhancedInputComponent->BindAction(
 			InputData->InputActionMoveX,
 			ETriggerEvent::Triggered,
-			this,
+,
 			&ASmashCharacter::OnInputMoveX
 			);
 	}
