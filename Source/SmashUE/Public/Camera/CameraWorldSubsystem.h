@@ -28,6 +28,7 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 	
+	void TickUpdateCameraZoom(float DeltaTime);
 	void TickUpdateCameraPosition(float DeltaTime);
 
 protected:
@@ -46,6 +47,8 @@ public:
 protected:
 	UPROPERTY()
 	TArray<UObject*> FollowTargets;
+
+	
 #pragma endregion
 #pragma region Misc
 public:
@@ -53,6 +56,7 @@ public:
 	virtual TStatId GetStatId() const override {return TStatId();};
 protected:
 	FVector CalculateAveragePositionBetweenTargets();
+	float CalculateGreatastDistanceBetweenTargets();
 #pragma endregion
 	
 #pragma region Bounds
@@ -79,5 +83,23 @@ protected:
 	
 #pragma  endregion
 
+#pragma region Zoom
+
+	UPROPERTY()
+	float CamZoomYMin = 0.f;
+
+	UPROPERTY()
+	float CamZoomYMax = 0.f;
+
+	UPROPERTY()
+	float CamZoomDistanceMin = 300.f;
+
+	UPROPERTY()
+	float CamZoomDistanceMax = 1500.f;
+
+	UFUNCTION()
+	void InitCamZoomParameters();
+	
+#pragma endregion
 
 };
